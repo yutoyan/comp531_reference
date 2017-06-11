@@ -1,0 +1,110 @@
+<div ng-controller="MainPageCtrl as vm">
+    <div class="container">
+        <div class="row">
+            <!-- User's profile panel -->
+            <div class="col-lg-3 col-md-3 col-sm-6 col-sx-6">
+                <div id="userStatus">
+                    <div class="userSidebarName"><span>Shuo Zhao</span></div>
+                    <img class="avatar img-circle"
+                    src="img/avatar.jpg">
+                    <!-- StatusCtrl -->
+                    <div ng-controller="StatusCtrl as vm">
+                        <p id="currentHeadline">{{ vm.headline }}</p>
+
+                        <div class="input-group input-group-sm">
+                            <label for="newHeadLine">What's in your mind...</label>
+                            <input type="text" class="form-control" placeholder="Your status" id="newHeadLine" ng-model="vm.headline">
+                        </div>
+                    </div>
+                    <!-- End of StatusCtrl -->
+                    <br>
+                </div>
+
+                <!-- Panel for people current user is following -->
+                <div id="followings">
+                    <div class="following">
+                        <div class="userSidebarName"><span>Normand Edmund Winship</span></div>
+                        <img class="avatar img-circle"
+                        src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/male3-512.png">
+                        <p>WARNING!! I know karate …..and some other words!!!</p>
+                        <button class="btn btn-default btn-xs" type="button">unfollow</button>
+                    </div>
+                    <br/>
+
+                    <div class="following">
+                        <div class="userSidebarName"><span>Sevan Voski</span></div>
+                        <img class="avatar img-circle"
+                        src="http://cf.ltkcdn.net/socialnetworking/images/std/168796-281x281-girl-swear-icon.png">
+                        <p>In victory, you deserve Champagne. In defeat you need it.</p>
+                        <button class="btn btn-default btn-xs" type="button">unfollow</button>
+                    </div>
+                    <br/>
+
+                    <div class="following">
+                        <div class="userSidebarName"><span>Cayley Rosemarie Parrish</span></div>
+                        <img class="avatar img-circle"
+                        src="http://megaicons.net/static/img/icons_sizes/189/462/256/comics-mask-icon.png">
+                        <p>Who care’s ?????………..I’m awesome</p>
+                        <button class="btn btn-default btn-xs" type="button">unfollow</button>
+                    </div>
+                    <br/>
+
+                    <div class="following">
+                        <div class="userSidebarName"><span>Christopher Sachie Akerman</span></div>
+                        <img class="avatar img-circle"
+                        src="http://findicons.com/files/icons/175/halloween_avatar/256/mike.png">
+                        <p>Read books instead of reading my status!</p>
+                        <button class="btn btn-default btn-xs" type="button">unfollow</button>
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="Add a following">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Add</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post panel -->
+            <div class="col-lg-9 col-md-9 col-sm-12 col-sx-12">
+                <div id="shareBox" class="well well-sm">
+                    <input type="text" class="form-control" placeholder="share something" id="postInputField">
+                    <div class="postBtns" role="group">
+                        <button class="btn btn-default btn-md">Post</button>
+                        <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-camera"></span>
+                        <input type="file">
+                    </span>
+                    <button class="btn btn-default btn-md" id="clearPost"> Clear</button>
+                </div>
+            </div>
+            
+            <!-- Search panel -->
+            <div class="col-lg-6 col-md-6 col-sm-9 col-sx-9 col-lg-offset-6 col-md-offset-6 col-sm-offset-3 col-xs-offset-3">
+                <div class="input-group input-group-md">
+                    <input type="text" class="form-control" placeholder="Search Posts" ng-model="vm.searchKeyword">
+                    <span class="input-group-btn"><button type="submit" class="btn btn-default">Search</button></span>
+                </div>
+            </div>
+            <br/><br>
+
+            <!-- Feed -->
+            <div id="cards" >
+                <div class="card well well-sm" ng-repeat='card in vm.cards | selectiveFilter: vm.searchKeyword'>
+                    <span class="postInfo">{{ card.time}}, {{ card.poster}}</span>
+                    <p> {{ card.body}} </p>
+                    <img class="cardImage" ng-src="{{ card.imageSrc }}"/>
+                    <button class="btn btn-default btn-md editPost"><span class="glyphicon glyphicon-pencil"></span>
+                        Edit
+                    </button>
+                    <button class="btn btn-default btn-md commentPost"><span class="glyphicon glyphicon-comment"></span>
+                        Comment
+                    </button>
+                </div>
+
+            </div> <!-- End cards -->
+        </div> <!-- End column -->
+    </div> <!-- End row -->
+</div> <!-- End container -->
+</div>

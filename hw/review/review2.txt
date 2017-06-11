@@ -1,0 +1,24 @@
+1. The color theme is uniform through three pages and the combination of light gray and white color, combined with some bright color for buttons, gives a modern and comforting feel.  I really like the color theme here.
+
+2. On the login page, the login panel and register panel is well separated.  This smart design helps existing user login directly without even looking down the page and finding the login panel.
+
+
+1. For the register part, some information about the format requirement of expected username input might be helpful for users.
+
+2 The post panel only takes a small portion of the width of the page on my screen while its background is clearly taking much larger space (more columns).  It might be able to contain more post and be more visually appealing if more width is allocated to posts and less scrolling down will be needed.
+
+3. The edit box is very small and it's difficult to write.  And I could not edit the old post based on my previous post.  I have to rewrite everything if I want to change something of my post.
+
+4. The author might want to remove some texts on the profile page.  I think this design is quite intuitive and too many words might just hurt the readability.
+
+
+
+
+1. For invalid login inputs, I used a message shown below login panel in stead of the window alert used here.  I feel that sometimes the frequent popping out of the alert window might be a little bit annoying.
+
+2. When an invalid user is trying to be followed, mine will pop up an error like this website does.  But the error on my page will persist until user try another valid following, which can be annoying.  This website allows user to delete the error message, which is better.
+
+3. All comments are displayed in a different background from the post while mine needs scrolling to read all comments, and the background color are all white.  I find the design used in this website could help reading while mine might look more concise.
+
+4. The `back-to-top' on the main page can be quite helpful for user to browser easily, while mine don't have it. 
+

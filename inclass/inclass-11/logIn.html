@@ -1,0 +1,124 @@
+<!-- Carousel -->
+<div id="theCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Define how many slides to put in the carousel -->
+    <ol class="carousel-indicators">
+        <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#theCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Define the text to place over the image -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="slide1"></div>
+            <div class="carousel-caption">
+                <h1>Rice book</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="slide2"></div>
+            <div class="carousel-caption">
+                <h1>Join today!</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Set the actions to take when the arrows are clicked -->
+    <a class="left carousel-control" href="#theCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"> </span>
+    </a>
+    <a class="right carousel-control" href="#theCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+</div>  <!-- End carousel -->
+
+
+<div class="container">
+    <div class="row">
+        <!-- Registeration Panel -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-sx-12" id="registerForm">
+            <a class="btn btn-lg btn-warning" href="#registerPanel" data-toggle="collapse">Register</a>
+
+            <!-- Registration pane that is initially hidden when the window is loaded -->
+            <div class="collapse" id="registerPanel">
+                <form method="GET" action="main.html">
+                    <div class="input-group input-group-md">
+                        <label for="accountName" class="input-group-addon">Account Name</label>
+                        <input type="text" class="form-control" name="accountName" id="accountName" required
+                               placeholder="letters and numbers only">
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="displayName" class="input-group-addon">Display Name</label>
+                        <input type="text" class="form-control" name="displayName" id="displayName"
+                               placeholder="optional">
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="email" class="input-group-addon">Email</label>
+                        <input type="email" class="form-control userInfo" name="email" id="email" required>
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="phone" class="input-group-addon">Phone</label>
+                        <input type="tel" class="form-control" name="phone" id="phone" required placeholder="10 digits">
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="birthDate" class="input-group-addon">Date of birth</label>
+                        <input type="date" class="form-control" name="birthDate" id="birthDate" required>
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <span class="input-group-addon">zipcode</span>
+                        <input class="form-control" type="text" name="zipcode" id="zipcode" required
+                               placeholder="5 digites">
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="password" class="input-group-addon">Password</label>
+                        <input class="form-control" type="password" name="password" id="password" required>
+                    </div>
+                    <br/>
+
+                    <div class="input-group input-group-md">
+                        <label for="passwordConfirm" class="input-group-addon">Password Confirmation</label>
+                        <input class="form-control" type="password" name="passwordConfirm" id="passwordConfirm"
+                               required>
+                    </div>
+                    <br/>
+
+                    <button type="reset" class="btn btn-default btn-md">Clear</button>
+                    <button type="submit" id="submitBtn" class="btn btn-default btn-md">submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Log In panel -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-sx-12 col-lg-offset-2 col-md-offset-2" id="loginPage">
+            <a class="btn btn-lg btn-warning" href="#loginPanel" data-toggle="collapse">Log In</a>
+
+            <!-- Log In Pane that is hidden when the windown is loaded -->
+            <div class="collapse" id="loginPanel">
+                <div class="input-group input-group-md">
+                    <label for="username" class="input-group-addon">Username</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <br/>
+
+                <div class="input-group input-group-md">
+                    <label for="loginPassword" class="input-group-addon">Password</label>
+                    <input type="password" class="form-control" id="loginPassword">
+                </div>
+                <br/>
+
+                <button id="logIn" class="btn btn-default btn-md">Log in</button>
+            </div>
+        </div>
+    </div>
+</div>

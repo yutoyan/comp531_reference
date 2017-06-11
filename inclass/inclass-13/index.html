@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="tabApp">
+<head>
+  <meta charset="utf-8" />
+  <title>Tab App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-resource.min.js"></script>  
+  
+  
+  <script src="app.js"></script>
+  <script src="service/srv.js"></script>
+  <script src="simple/simpleControllers.js"></script>
+  <script src="service/serviceControllers.js"></script>
+  <script src="resource/httpController.js"></script>
+  <script src="resource/resourceController.js"></script>
+  <script src="directive/directiveController.js"></script>
+  
+</head>
+<body ng-controller="MainCtrl as main">
+
+<div style="padding: 1em;">
+
+<nav>
+  <div class="btn-group">  
+    <a href="#/firstTab" class="btn btn-primary" btn-checkbox>First</a>
+    <a href="#/secondTab" class="btn btn-primary" btn-checkbox>Second</a>
+    <a href="#/thirdTab" class="btn btn-primary" btn-checkbox>Third</a> 
+    <a href="#/service" class="btn btn-primary" btn-checkbox>Service</a> 
+    <a href="#/http" class="btn btn-primary" btn-checkbox>http</a> 
+    <a href="#/resource" class="btn btn-primary" btn-checkbox>Resource</a> 
+    <a href="#/directive" class="btn btn-primary" btn-checkbox>Directive</a> 
+  </div>
+</nav>
+
+<p>
+The main page is controlled by the "{{ main.name }}" controller.
+</p>
+
+<p>Here is the imbedded view when navigating to {{ main.getLocation() }}</p>
+<div style="padding: 0em 2em 2em 2em;">
+  <div ng-view></div>
+</div>
+
+<hr>
+
+<footer>
+... footer ...
+</footer>
+
+</div>
+</body>
+</html>
+

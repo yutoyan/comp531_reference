@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+    <title>My Profile</title>
+    <meta name="author" content="Shuo_Zhao"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="nav">
+    <ul class="list-inline">
+        <li>Rice Book</li>
+        <li><a href="main.html">Home</a></li>
+        <li><a id="linkToProfile" href="profile.html">My Profile </a></li>
+        <li><a id="logOut" href="index.html">Log out</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- user profile photo -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-sx-12" id="currentProfilePhoto">
+            <img class="avatar img-circle"
+                 src="img/avatar.jpg">
+            <br/><br/>
+                <span class="btn btn-default btn-file btn-warning btn-lg"><span class="glyphicon glyphicon-camera"> update new picture </span>
+                <input type="file">
+            </span>
+        </div>
+
+        <!-- current info of user and input for updating user's info -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12 col-lg-offset-1 col-md-offset-1" id="updateInfo">
+            <div class="input-group input-group-md">
+                <label for="displayName" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Display Name</button>
+                </label>
+                <input type="text" class="form-control userInfo" name="displayName" id="displayName"
+                       placeholder="letters and numbers only">
+                <span class="input-group-addon currentValue" id="currentDisplayName">Shuo</span>
+            </div>
+            <br/>
+
+            <div class="input-group input-group-md">
+                <label for="email" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Email</button>
+                </label>
+                <input type="email" class="form-control userInfo" name="email" id="email">
+                <span class="input-group-addon currentValue" id="currentEmail">shuo@rice.edu</span>
+            </div>
+            <br/>
+
+            <div class="input-group input-group-md">
+                <label for="phone" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Phone</button>
+                </label>
+                <input class="form-control userInfo" type="tel" name="phone" id="phone" placeholder="10 digits">
+                <span class="input-group-addon currentValue" id="currentPhone">112-358-1321</span>
+            </div>
+            <br/>
+
+            <div class="input-group input-group-md">
+                <label for="zipcode" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Zipcode</button>
+                </label>
+                <input class="form-control userInfo" type="text" name="zipcode" id="zipcode" pattern='\d{5}'
+                       placeholder="5 digits">
+                <span class="input-group-addon currentValue" id="currentZipcode">77005</span>
+            </div>
+            <br/>
+
+            <div class="input-group input-group-md">
+                <label for="password" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Password</button>
+                </label>
+                <input class="form-control userInfo" type="password" name="password" id="password">
+                <span class="input-group-addon currentValue hidden" id="currentPassword">comp531</span>
+            </div>
+            <br/>
+
+            <div class="input-group input-group-md">
+                <label for="passwordConfirm" class="input-group-btn">
+                    <button class="btn btn-default" type="button">Password Confirmation</button>
+                </label>
+                <input class="form-control userInfo" type="password" name="passwordConfirm" id="passwordConfirm">
+                <span class="input-group-addon currentValue hidden" id="currentPasswordConfirm">comp531</span>
+            </div>
+            <br/>
+
+            <button class="btn btn-warning btn-lg" id="updateBtn">Update your Profile</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Hello HTML!</title>
+	<meta name="description" content="Personal page of Shuo Zhao" />
+	<meta name=="keywords" content="Shuo, Zhao, trip, favorite places, countdown clock" />
+	<meta name="author" content="Shuo_Zhao" />
+</head>
+<body>
+	<h2><span id="clock">This is will change in 15 seconds!</span></h2>
+	<button id = "pause">Pause</button>
+	<button id = "resume">Resume</button>
+
+	<table border="1" width="700">
+
+		<tr>
+			<th>Name</th>
+			<td>Shuo Zhao</td>
+			<td rowspan="3" id="photoCell"><img src="http://www.ruf.rice.edu/~spe/images/college-photo_5182._445x280-zmm.jpg" alt="Shuo_Zhao photo" title="a photo of Shuo Zhao" id="ricePhotos"/></td>
+		</tr>
+		<tr>
+			<th>Favorite Place</th>
+			<td><a href="https://en.wikipedia.org/wiki/Lake_Tahoe" target="_blank">Lake Tahoe</a>
+				<br/>
+				<a href="http://www.gulfshores.com" target='_blank'>Gulf shores</a>
+			</td>
+		</tr>
+		<tr>
+			<th>Personal Page</th>
+			<td><a href="https://www.facebook.com/shuo.zhao.501" target="_blank">Facebook</a></td>
+		</tr>
+		<tr>
+			<th>Favorite trip</th>
+			<td colspan="2">
+				<p> I went to Hermann Park last week, which is my favorite place since it is quite near to my office and it has a small but wonderful zoo.</p>
+				<p> Among all adorable animals, giraffe is my favorite. They are adorable and like being close to people. They even pose well if you happen to bring a camera with you! So cute! </p> 
+			</td>
+		</tr>
+		<tr>
+			<th>Your comments</th>
+			<td colspan="2"><textarea required id="comments">Your comments</textarea> </td>
+		</tr>
+
+	</table>
+
+	<button id = "clear">Clear comments</button>
+	
+	<script>
+
+		//script for clearing the comments textarea
+		var elClear = document.getElementById('clear');
+		elClear.onclick = clearComments;
+		
+		function clearComments(){
+			var elComments = document.getElementById("comments");
+			elComments.value = "";
+		}
+		
+		//start the coundtdown and alert for the countdown in 5 seconds 
+		window.onload = function(){
+			setTimeout(refreshAlert, 5000);	
+			countDown(15);
+		};
+
+		// Alert for refreshing the page
+		function refreshAlert(){
+			alert("This page will refresh when the counter reaches zero!");
+		}
+
+		//Countdown as well as the pause and resume buttons
+		var timer;
+		var isPaused = false;
+		var elPauseCountdown = document.getElementById("pause");
+		var elResumeCountdown = document.getElementById("resume");
+		elPauseCountdown.onclick = pauseCountDown;
+		elResumeCountdown.onclick = resumeCountDown;
+
+		function countDown(t) {
+			timer = setInterval(function () {
+				document.getElementById("clock").innerHTML = "Countdown: " + t;
+				if(!isPaused){
+					if (t === 0){
+						clearInterval(timer);
+						window.location = "https://www.clear.rice.edu/comp431/sample/hello.html";
+					}
+					else{
+						t--;
+					}}
+				}, 1000);
+		}
+
+		function pauseCountDown(){
+			isPaused = true;
+		}
+
+		function resumeCountDown(){
+			isPaused = false;
+		}
+
+	</script>
+
+</body>
+</html>

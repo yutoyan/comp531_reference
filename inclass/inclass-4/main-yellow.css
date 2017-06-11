@@ -1,0 +1,128 @@
+body {
+	padding: 2em;
+	padding-top: 10rem;
+	background-color: rgb(229, 242, 255);
+	font-family: Arial, Verdana, sans-serif;
+	background-image: 
+	url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/swirl_pattern.png);
+
+}
+
+div {
+	border: thin solid rgb(217, 217, 217);
+	padding: 2em;
+	margin-bottom: 2em;
+	background-color: white;
+	border-radius: 10px;
+	opacity: 0.8;
+}
+
+div:hover {
+	background-color: #ddd4bc;
+}
+
+.visible {
+	border: none;
+}
+
+.hidden{
+	display: none;
+}
+
+#shareBox {
+	border: thin solid #ddd4bc;
+	margin-bottom: 2em;
+	background-color:#f8dc0b ;
+}
+
+#shareInput {
+	min-width: 80%;
+	min-height: 4em;	
+}
+
+#shareBtn {
+	/*background-image: -webkit-linear-gradient(top, #64cbfa, #52a3fa);
+	background-image: -moz-linear-gradient(top, #64cbfa, #52a3fa);
+	background-image: -ms-linear-gradient(top, #64cbfa, #52a3fa);
+	background-image: -o-linear-gradient(top, #64cbfa, #52a3fa);
+	background-image: linear-gradient(to bottom, #64cbfa, #52a3fa);
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;*/
+	background-color: white;
+	/*border-color: #3d3c3a;*/
+	box-shadow: 1px 1px 2px #707070;
+	border-radius: 0.5em;
+	font-family: Cursive;
+	color: #3d3c3a;
+	font-size: 1em;
+	padding: 0.5em 1em;
+}
+
+#shareBtn:hover {
+	background: #cccccc;
+	color: white;
+}	
+
+div#nav {
+	font-family: Georgia, Times, serif;
+	background-color: #fba827;
+	margin-left: auto;
+	margin-right:auto;
+	position: fixed;
+	border-radius:0em;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 0.5em 0.5em;
+	box-shadow: 3px 1px 3px #707070;
+	text-align: center;
+	color:white;
+	opacity: 0.95;
+}
+
+#nav>p, #nav>h1, #nav>input {
+	display: inline-block;
+	padding: 0.1em;
+	margin-right: 0.3em;
+	text-align: center;
+	font-family: Georgia, Times, serif;
+}
+
+#username {
+	border-bottom-color: #1a8cff;
+	border-bottom-width: thin;
+	border: thin solid #cccccc;
+	font-size: 90%;
+}
+
+#login {
+	background-color: white;
+	margin:0.2em;
+	font-size: 90%;
+	font-family: Georgia, Times, serif;
+	padding: 3em;
+	text-align: center;
+	width:5em;
+	color:#4d4d4d;
+}
+#greeting{
+	margin:0.2em;
+	font-size: 120%;
+	font-family: Georgia, Times, serif;
+	padding: 0.2em;
+	margin-right: 0.3em;
+	text-align: center;
+}
+
+#username.hidden {
+	display: none;
+}
+
+#greeting.hidden {
+	display: none;
+}
+input.active{
+	border-color: #ddd4bc;
+}
+

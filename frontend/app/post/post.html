@@ -5,7 +5,7 @@
         <div class="postBtns" role="group">
             <span> {{ imageFile.name }} </span>
             <span class="btn btn-default btn-file"><span class="glyphicon glyphicon-camera"></span>
-            <input type="file" accept="image/*" onchange="angular.element(this).scope().vm.setFile(this)">
+            <input type="file" accept="image/*" on-change="angular.element(this).scope().vm.setFile(this)">
             </span>
             <button class="btn btn-default btn-md" id='addPostBtn' ng-click='vm.addPost()'>Post</button>
             <button class="btn btn-default btn-md" id="clearPost" ng-click='vm.clearNewPost()'>Clear</button>

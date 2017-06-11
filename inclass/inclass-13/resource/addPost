@@ -1,0 +1,98 @@
+describe('Resource Controller Tests', function() {
+	var ctrl;
+	var $q;
+	var promises = []
+	var mockApiService, mockLocationService
+
+	beforeEach(module('tabApp'))
+
+	beforeEach(inject(function(_$q_) {
+		$q = _$q_
+
+		function makePromise(response) {
+			var p = $q.defer()
+			promises.push({ promise: p, response: response })
+			return { $promise: p.promise }
+		}
+
+		// register Mock providers
+		mockApiService = {
+			getPosts: function() {
+				return makePromise({ posts: 
+					[{
+						'author':'Test',
+						'title':'A Test Post',
+						'date':'Today',
+						'body':'... test post ...'
+					}]
+				})
+			},
+			getStatus: function() {
+				return makePromise(
+					{'status':'Test Status'}
+				)
+			},
+			setStatus: function() {
+				return makePromise(
+					{'status':'Was set'}
+				)
+			}
+		}
+
+		mockLocationService = {
+			get: function() { 
+				return makePromise('was called')
+			} 
+		}
+
+		spyOn(mockApiService, 'getPosts').and.callThrough()
+		spyOn(mockLocationService, 'get').and.callThrough()
+	}))
+
+
+	beforeEach(inject(function($controller, $rootScope) {
+ 		ctrl = $controller('ResourceCtrl', {
+			'api': mockApiService,
+			'LocationService': mockLocationService
+		})
+		ctrl._resolveTestPromises = function() {
+			promises.forEach(function(p) {
+				p.promise.resolve(p.response)
+			})
+			$rootScope.$apply()
+		}
+		ctrl._resolveTestPromises()
+		// ctrl.username = "sz32"
+		// ctrl.password = "morening-prevent-slow"
+		// ctrl.login()
+	}))
+
+	it('should load with no posts', function() {
+		expect(mockLocationService.get).toHaveBeenCalled()
+		expect(ctrl.posts.length).toBe(0)
+	})
+
+	it('should have a location', function() {
+		expect(ctrl.location).toEqual(jasmine.any(Object))
+	})
+
+	it('should have a status', function() {
+		expect(ctrl.userStatus).not.toBeNull()
+		expect(ctrl.userStatus.length).not.toBe(0)
+		expect(ctrl.userStatus).toEqual("Test Status")
+	})
+
+	it('should call the post api and get 1 Test post', function() {
+		ctrl.loadPosts()
+		ctrl._resolveTestPromises()
+		expect(ctrl.posts.length).toBe(1)
+		expect(ctrl.posts[0].author).toEqual('Test')
+	})
+
+	it('should remove a post', function() {
+		ctrl.posts.push({ 'id': 1 })
+		expect(ctrl.posts.length).toBe(1)
+		ctrl.removePosts(1)
+		expect(ctrl.posts.length).toBe(0)
+	})
+})

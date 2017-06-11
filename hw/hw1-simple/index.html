@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="registertaion page" />
+	<meta name="author" content="Shuo Zhao" />
+</head>
+<body>
+
+	<form id="regiserationForm" method="GET" action="formProcessor.html">
+
+		<label>account name:(letters and numbers only) <input class= "userInfo" type="text" name="accountName" id="accountName" required /></label>
+		<br />
+		<label>display name (optional):  <input type="text" class= "userInfo"  name="displayName" id="displayName" /></label>
+		<br />
+		<label>email: <input type="email" name="email" class= "userInfo" id="email" required/></label>
+		<br />
+		<label>Phone (format ###-###-####:) <input type="tel" name="phone" id="phone" required pattern='\d{3}[\-]\d{3}[\-]\d{4}'/></label>
+		<br />
+		<label>date of birth: <input type="date" name="birthDate" id="birthDate" required /></label>
+		<br />
+		<label>zipcode (5 digites): <input type="text" name="zipcode" id="zipcode" required pattern='\d{5}'/></label>
+		<br />
+		<label>password: <input type="password" name="password" id="password" required /></label>
+		<br />
+		<label>confirm your password: <input type="password" name="passwordConfirm" id="passwordConfirm" required/> </label>
+		<br />
+
+		<!--hidden timestamp-->
+		<input type="hidden" name="timestamp" id="timestamp" />
+
+		<!-- two buttons-->
+		<input type="reset" value="Clear">
+		<input type="submit" value="Register"  onclick="return checkForm(this.parentNode)"/>
+
+	</form>
+
+	<script>
+		
+		/*Check the validity of input information inculding account name and 
+		password since other fileds has required and pattern attributes. If they are valid, it also generates the date of submission.
+		*/
+		function checkForm(form){
+			var errMsg = ""; //If no error happen, errMsg will be an empty string. Otherwise 
+			//it means some input data is not valid.
+			errMsg += validateAccountName(form.accountName.value);
+			errMsg += validatePassword(form.password.value, form.passwordConfirm.value);
+			errMsg += validateBirthDate(form.birthDate.value);
+			console.log(form);
+			if (errMsg !== ""){
+				window.alert(errMsg);
+				return false;
+			}
+			else{
+				setSubmissionDate();
+				return true;	
+			}
+		}
+
+		function setSubmissionDate(){
+			var today = new Date();
+			document.getElementById("timestamp").value = today.getTime();
+		}
+
+		function validateAccountName(accountName){
+			var errMsg = "";
+			var start = accountName.charAt(0);
+			letterNumber = /^[0-9a-zA-Z]+$/;
+			letter = /^[a-zA-Z]+$/;
+			if (! letterNumber.test(accountName)){
+				errMsg += "Only letters and numbers can be used for account name! \n";
+			}else if(! letter.test(start)){
+				errMsg += "Account name has to start with a letter! \n";
+			}
+			return errMsg;
+		}
+
+		function validatePassword(firstPassword, confirmPassword){
+			var errMsg = "";
+			if(firstPassword !== confirmPassword){
+				errMsg += "Unmatched passwords! \n";
+			}
+			return errMsg;
+		}
+
+		function validateBirthDate(birthDate){
+			var errMsg = "";
+			var today = new Date();
+			var bd = new Date(birthDate);
+			if ((bd - today) > 0){
+				errMsg += "Your bith date has to be eariler than today! \n";
+			}
+			return errMsg;
+		}
+
+
+	</script>
+</body>
+</html>

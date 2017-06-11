@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New User Information</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="summary of new user information" />
+	<meta name="author" content="Shuo Zhao" />
+</head>
+<body>
+
+	<script>
+		window.onload = function(){
+
+		var values = location.search.substring(1).split('&').filter(function(e) { return (e.length); });
+
+		document.writeln('<table border = \"2\">');
+		for (var i = 0; i < values.length; i++){
+			userInfo = "";
+			var keyValue = values[i].split('=');	
+			var key = keyValue[0];
+			var value = keyValue[1];
+
+			// change % in email address back to @
+			if (key === "email"){
+				value = decodeURIComponent(value);
+			} 
+			// change timestamp from milliseconds to human readable format
+			if (key == "timestamp"){
+				var submitDate = new Date(Number(value));
+				value = submitDate.toDateString();
+			}
+
+			userInfo += "<tr> <th>" + key + "</th>" + "<td>" + value + "</td></tr>";//Add one row
+			document.writeln(userInfo);
+		}	
+		document.writeln('</table>');
+};
+
+</script>
+</body>
+</html>

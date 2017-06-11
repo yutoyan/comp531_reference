@@ -1,0 +1,16 @@
+https://zl15hw6frontend.herokuapp.com/
+
+1 Color scheme is quite fresh and unique, which makes it easier to stand out from other websites and be remembered. But too many color might also be distracting.
+2 The main page is of nice layout. Posts, new post, current user and followed user are well separated into partitions. All parts can be easily found due to the use of different color but it also could distract users as mentioned before.
+3 Search area is well designed! No button used but placeholder giving explanation about its functionality makes it very clean looking and browsing easy for users.
+
+1 It won't go to the main page automatically once I logged in successfully.
+2 For registration part, I think it  might be better if the author keep hints of required format using label or placeholder but not both at the same time. Less and non repeated characters might be easier to read.
+3 After I logged in, once I refreshed the main page, everything is gone (avatar, posts, followed users, and status)
+4 I would suggest that it might look better if the author remove the border of posts area.
+5 The update button for status updating might cause some confusion since the status has already changed once I entered something without clicking the button.
+6 All comment area changed when I try to add a new comment, which is kind of confusing.
+
+1 The comments area uses a different background color from the posts, which helps the user to tell these two areas apart very easily. Mine just uses the default white color since my website already uses too many colors. 
+2 On this website, all comments are displayed while mine needs scrolling to read all comments. It's easier for users to read all comments at once while mine could show more posts. It's just a tradeoff.
+3 On the profile page, this site grouped current state and updating area together in terms of the information type while I separate all into two areas: current state area and updating area. The organization used by this site is easier for user to spot the right place to update. But some extra space and better arrangement of  entries might be helpful for readability and understanding. Now all items with different colors simply put together might look a little bit crowded.

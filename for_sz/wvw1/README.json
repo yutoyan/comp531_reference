@@ -1,0 +1,5 @@
+{
+	"netid": "wvw1",
+	"frontend": "https://owlbook.herokuapp.com",
+	"backend": "https://owlbook-server.herokuapp.com"
+}

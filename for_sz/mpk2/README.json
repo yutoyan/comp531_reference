@@ -1,0 +1,5 @@
+{
+	"netid": "mpk2",
+	"frontend": "https://newmndfront.herokuapp.com",
+	"backend": "https://mndserver.herokuapp.com"
+}

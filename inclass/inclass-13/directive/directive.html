@@ -1,0 +1,19 @@
+<div>
+	<p>
+	This is a template for my custom directive.  The controller for this directive is named "{{ dvm.name }}" and was initialized with "{{ initial }}"
+	</p>
+
+	<p>
+	The directive has it's own scope.  Which can be optionally shared<br>
+	<table>
+		<tr>
+			<th>Shared</th><th>Private</th>
+		</tr>
+		<tr>
+			<td><input type='text' ng-model='magic'></td>
+			<td><input type='text' ng-model='dvm.private'></td>
+		</tr>
+		<tr><td>{{ magic }}</td><td>{{ dvm.private }}</td></tr>
+	</table>
+
+</div>

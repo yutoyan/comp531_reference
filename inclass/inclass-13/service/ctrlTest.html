@@ -1,0 +1,23 @@
+<h4>In charge: {{vm.name}}</h4>
+
+<label>Controller's secret value: 
+<input type="text" ng-model="vm.secret">
+</label><br>
+
+<label>Angular Constant
+<input type="text" ng-model="vm.value.a">
+</label><br>
+
+<label>Angular Factory
+<input type="text" ng-model="vm.fac.value">
+</label><br>
+
+<label>Angular Service
+<input type="text" ng-model="vm.srv.value">
+</label><br>
+
+<label>Angular Provider
+<input type="text" ng-model="vm.pvd.value">
+</label><br>
+
+Provider's configurated value: <em>{{ vm.pvd.thing }}</em>

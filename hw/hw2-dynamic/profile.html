@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en_us">
+<head>
+    <title>My Profile</title>
+    <meta name="author" content="Shuo_Zhao"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="nav">
+ <ul class="list-inline">
+            <li><h2>Rice Book</h2></li>
+            <li><a href="main.html">Home</a></li>
+            <li><a id="linkToProfile" href="profile.html">My Profile </a></li>
+            <li><a id="logOut" href="index.html">Log Out</a></li>
+ </ul>
+    <!-- <h1>Rice Book</h1>
+    <a id="linkToHome" href="main.html">Home </a>
+    <a id="linkToProfile" href="profile.html">My Profile</a> -->
+</div>
+
+<div id="content">
+    <label>display name: <input type="text" class="userInfo" name="displayName" id="displayName"/></label>
+    <span class="currentValue" id="currentDisplayName">Shuo</span>
+    <br/>
+
+    <label>email: <input type="email" name="email" class="userInfo" id="email" /></label>
+    <span class="currentValue" id="currentEmail">shuo@rice.edu</span>
+    <br/>
+
+    <label>phone (10 digits) <input type="tel" name="phone" id="phone" /></label>
+    <span class="currentValue" id="currentPhone">112-358-1321</span>
+    <br/>
+
+    <label>zipcode (5 digites): <input type="text" name="zipcode" id="zipcode"  pattern='\d{5}'/></label>
+    <span class="currentValue" id="currentZipcode">77005</span>
+    <br/>
+
+    <label>password: <input type="password" name="password" id="password" /></label>
+    <span class="currentValue hidden" id="currentPassword">comp531</span>
+    <br/>
+
+    <label>confirm your password: <input type="password" name="passwordConfirm" id="passwordConfirm" /> </label>
+    <span class="currentValue hidden" id="currentPasswordConfirm">comp531</span>
+    <br/>
+
+    <button id="updateBtn">Update your Profile</button>
+</div>
+
+<script type="text/javascript" src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+For homework 1:
+
+I spent roughly one hour on it and I guess the validation part took
+most time of it.
+
+For homework 2:
+
+I spent around 4 hours on it. I find that using javascript to cyclye 
+through different images and assigning one button for each image to 
+stop/start the cycling a little bit difficult. What's more, I spend 
+a lot of time tring to make the website looks good.

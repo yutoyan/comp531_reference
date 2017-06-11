@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Pizza Guys!</title>
+	<meta name="description" content="A form for ordering pizza" />
+    <meta http-equiv="author" content="Shuo Zhao" />
+</head>
+<body>
+	<form id="pizzaOrderForm" method="GET" action="#">
+	<p>Order Your pizza!</p>
+
+	<fieldset><!--contact info-->
+     	<legend> Contact Info</legend>
+     	<label>First name: <input type="text" name="firstName" id="firstName" required /></label>
+		<label>Last Name:  <input type="text" name = "lastName" id="lastName" required/></label>
+		<br />
+		<label> Phone (format ###-###-####:) <input type="tel" name="phone" id="phone" required pattern='\d{3}[\-]\d{3}[\-]\d{4}'/></label>
+		<br />
+		<label>Address: <input type="text" name="address" id="address" required/> </label>
+	</fieldset><!--end of contact-->
+	
+	<fieldset><!--order info-->
+		<legend>Order Info</legend>
+		<p>
+		<label >Pizza Size<br/>
+			<label><input type="radio" name="pizzaSize" value="large" /> Large ($20)</label>
+			<label><input type="radio" name="pizzaSize" value="medium" /> Medium ($15)</label>
+			<label><input type="radio" name="pizzaSize" value="small" /> Small ($10)</label>
+			<label><input type="radio" name="pizzaSize" value="personal" /> Personal ($7)</label>
+		</label>
+		</p>
+		
+		<p>
+		<label>Toppings<br/>
+			<label><input type="checkbox" name="toppings" value="sausage"/> Sausage</label>
+			<label><input type="checkbox" name="toppings" value="pepperoni"/> Pepperoni</label>
+			<label><input type="checkbox" name="toppings" value="olive"/> Olive</label>
+			<label><input type="checkbox" name="toppings" value="anchovies"/> Anchovies</label>
+			<label><input type="checkbox" name="toppings" value="onions"/> Onions</label>
+
+		</label>
+		</p>	
+	</fieldset>
+
+	<button id = "clearForm">Clear the form</button>
+	<input type="submit" name="placeOrder" value="Place Order"  onclick="return checkForm(this.parentNode)"/><!--end of order info-->
+
+	</form>
+
+	<script>
+		var btnClear = document.getElementById('clearForm');
+		btnClear.onclick = clearFormFunc;
+
+		function clearFormFunc(){
+			document.getElementById('pizzaOrderForm').reset();
+		}
+
+		function checkForm(form){
+			var valid = false;
+			for( var i = 0; i < form.pizzaSize.length; i++){
+				if (form.pizzaSize[i].checked == true){
+					valid = true;
+			}
+		}
+
+		console.log(form);
+		if (!valid){
+			window.alert("Invalid order, please check it!");
+		}
+		return valid;
+		}
+
+	</script>
+	
+</body>
+</html>

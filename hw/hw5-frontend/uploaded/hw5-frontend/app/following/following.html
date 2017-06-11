@@ -1,0 +1,14 @@
+<!-- Panel for people current user is following -->
+<div id="followings">
+    <!-- Feed -->
+    <div class="card well well-sm" ng-repeat='following in vm.followings'>
+        <div class="following">
+            <div class="userSidebarName"><span>{{ following.name }}</span></div>
+
+            <img class="avatar img-circle" ng-src="{{ following.imgSrc }}"/>
+            <p>{{ following.status }}</p>
+            <button class="btn btn-default btn-xs" type="button">unfollow</button>
+        </div>
+        <br/>
+    </div>
+</div> <!-- End cards -->

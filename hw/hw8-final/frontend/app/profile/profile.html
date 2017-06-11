@@ -1,0 +1,174 @@
+<!-- Collapsible navigation bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top Navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#myNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Rice Book</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="nav navbar-nav">
+                <li><a href="#/main">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="inlineCenter">
+                <li class="active"><a href="#/profile"><span
+                        class="glyphicon glyphicon-user"></span> My Profile</a>
+                </li>
+                <li ng-click='vm.logout()' id="ngLink"><a><span
+                        class="glyphicon glyphicon-log-in"></span> Log out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <!-- user profile -->
+        <div class="col-lg-5 col-md-5 col-sm-12 col-sx-12"
+             id="currentProfilePhoto">
+
+            <h2 class="profileSectionTitle">Your Profile</h2>
+
+            <div class="col-lg-8 col-md-8 col-sm-12 col-sx-12" ng-hide="cropper.sourceImage!=null">
+                <img id="profileAvatar" class="avatar img-circle center-block "
+                     ng-src="{{ vm.avatar }}"/>
+            </div>
+            <div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                    <canvas class="col-lg-6 col-md-6 col-sm-12 col-sx-12" wdith="140" height="140" id="canvas"
+                            image-cropper image="cropper.sourceImage"
+                            cropped-image="cropper.croppedImage" crop-width="400" crop-height="400" touch-radius="30"
+                            crop-area-bounds="bounds" ng-show="cropper.sourceImage!=null"></canvas>
+
+                    <img class="col-lg-6 col-md-6 col-sm-12 col-sx-12 img-circle profile-img-size"
+                         ng-show="cropper.croppedImage!=null"
+                         ng-src="{{cropper.croppedImage}}"/>
+                </div>
+                <input type="file" img-cropper-fileread image="cropper.sourceImage"/>
+            </div>
+            <br/>
+            <br/>
+
+            <div class="col-lg-10 col-md-10 col-sm-12 col-sx-12">
+                <p class="input-group-addon currentValue" id="currentUserName">
+                    {{ vm.displayName }}</p><br/>
+                <p class="input-group-addon currentValue" id="currentEmail">{{
+                    vm.email }}</p><br/>
+                <p class="input-group-addon currentValue" id="currentZipcode">{{
+                    vm.zipcode}}</p><br/>
+                <p class="input-group-addon currentValue hidden">{{
+                    vm.password}}</p>
+            </div>
+        </div>
+
+        <!-- Updating user's info -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12 col-lg-offset-1 col-md-offset-1"
+             id="updateInfo">
+            <h2 class="profileSectionTitle">Update Profile</h2>
+            <div id="updateProfileForm">
+                <div class="input-group input-group-md">
+                    <label class="input-group-btn">
+                        <button class="btn btn-default" type="button">Email</button>
+                    </label>
+                    <input class="form-control userInfo" ng-model="vm.newEmail"
+                           ng-change="vm.validateEmail()">
+                </div>
+                <span class="updateMsg"> {{vm.emailMsg}}</span>
+                <br/>
+
+                <div class="input-group input-group-md">
+                    <label class="input-group-btn">
+                        <button class="btn btn-default" type="button">Zipcode
+                        </button>
+                    </label>
+                    <input class="form-control userInfo" placeholder="5 digits"
+                           ng-model="vm.newZipcode"
+                           ng-change="vm.validateZipcode()">
+                </div>
+                <span class="updateMsg">{{ vm.zipcodeMsg }}</span>
+                <br/>
+
+                <div class="input-group input-group-md">
+                    <label for="password" class="input-group-btn">
+                        <button class="btn btn-default" type="button">Password
+                        </button>
+                    </label>
+                    <input class="form-control userInfo" type="password"
+                           name="password" id="password"
+                           ng-model="vm.newPassword"
+                           ng-change="vm.validatePassword()">
+
+                </div>
+                <br/>
+
+                <div class="input-group input-group-md">
+                    <label for="passwordConfirm" class="input-group-btn">
+                        <button class="btn btn-default" type="button">Password
+                            Confirmation
+                        </button>
+                    </label>
+                    <input class="form-control userInfo" type="password"
+                           name="passwordConfirm" id="passwordConfirm"
+                           ng-model="vm.newPasswordConfirmation"
+                           ng-change="vm.validatePassword()">
+
+                </div>
+                <span class="updateMsg"> {{ vm.passwordMsg }}</span>
+                <br/>
+
+                <button class="btn btn-warning btn-sm" id="updateBtn"
+                        ng-click='vm.updateProfile()'>Update
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Link two accounts -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12 col-lg-offset-1 col-md-offset-1"
+             id="linkAccounts" ng-hide="vm.username === vm.displayName">
+            <h2 class="profileSectionTitle">Link accounts</h2>
+            <div>
+                <div class="input-group input-group-md">
+                    <label for="linkedUsername"
+                           class="input-group-addon">Username</label>
+                    <input ng-model="vm.linkedUsername" type="text"
+                           class="form-control" id="linkedUsername">
+                </div>
+                <br/>
+
+                <div class="input-group input-group-md">
+                    <label for="linkedPassword" class="input-group-addon">Password</label>
+                    <input ng-model="vm.linkedPassword" type="password"
+                           class="form-control" id="linkedPassword">
+                </div>
+                <br/>
+
+                <button class="btn btn-warning btn-sm" id="linkAccountsBtn"
+                        ng-click='vm.linkAccounts()'>Link Accounts
+                </button>
+                <p id="systemMsg">{{ vm.loginMsg }}</p>
+            </div>
+
+        </div>
+
+        <!-- Unlink two accounts -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12 col-lg-offset-1 col-md-offset-1"
+             id="unlinkAccounts" ng-show="vm.isLinked">
+            <h2 class="profileSectionTitle">Unlink accounts</h2>
+            <div>
+                <button class="btn btn-warning btn-sm" id="unlinkAccountsBtn"
+                        ng-click='vm.unlinkAccounts()'>Unlink Accounts
+                </button>
+                <p id="unlinkMsg">{{ vm.unlinkMsg }}</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+

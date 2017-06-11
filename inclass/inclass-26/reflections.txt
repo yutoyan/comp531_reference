@@ -1,0 +1,28 @@
+First of all, I want to say this is really a great course and I have learned a lot
+from taking this class and doing projects. Thank you for offering this awesome course!
+
+I really loved learning how to integrate the backend and frontend together. It gives
+me the whole picture of my project and I start to see how all parts interact with each
+other and become a complete, fully functional application.
+
+And I also love the way we build our applications. We build small features one by one
+in in-class exercises, put several into our homeworks, and finally put all homeworks
+together to become a complete one. This course stays challenging throughout the whole
+semester but won't crush most students at the end.
+
+One thing I would suggest is that probably posting the presentation a day or a half
+before class would be great. Since the pace of the class is really fast, it would be
+helpful if we could read through the presentation first and get us familiar with the topic.
+Sometimes I just stuck to one sentence or one line of code of the slides and could not
+follow the pace of the rest of the lecture afterwards.
+
+I would also suggest that maybe we could have recordings of the lectures, especially for
+the live demo part. Again, I am not familiar with some topics so I spent a lot of time
+watching youtube videos if I did not catch it in class. But I believe the most helpful
+resources is our class. So it would be great if we could watch it again and take some
+time to understand it thoroughly.
+
+Scott and Terry are very helpful through this whole semester. This is also one key feature
+of this class. I could always get prompt feedback and explanations in person or from piazza,
+which really helps me survive this class and learns a lot from it. Thank you!
+

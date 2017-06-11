@@ -1,0 +1,39 @@
+<h3>$resource Service</h3>
+
+<div ng-hide="vm.loggedIn">
+<input type="text" ng-model="vm.username" placeholder="username">
+<input type="password" ng-model="vm.password" placeholder="password">
+<input type="button" value="LogIn" ng-click="vm.login()">
+</div>
+<div ng-show="vm.loggedIn">
+<input type="button" value="LogOut" ng-click="vm.logout()">
+</div>
+
+
+<p>User status message: {{ vm.userStatus }} for {{ vm.getUsername() }}<br>
+<input type="text" ng-model="vm.newUserStatus" placeholder="status message">
+<input type="button" ng-click="vm.updateStatus()" value="Save">
+</p>
+
+<p>User Location: { <span ng-click="vm.updateLocation('lat')">{{ vm.loc.location.lat | number: 3 }}</span>, 
+					<span ng-click="vm.updateLocation('lng')">{{ vm.loc.location.lng | number: 3 }}</span> }</p>
+<!-- sz -->
+<div ng-show="vm.loggedIn">
+<input type="text" ng-model="vm.newPost" placeholder="What's in your mind...">
+<input type="button" value="Post" ng-click="vm.addPost()">
+<!-- sz -->
+
+<label class="btn"
+	ng-class="{ 'btn-warning': vm.stop, 'btn-success': !vm.stop }" 
+	ng-click="vm.toggleLoading()">
+	{{ vm.stop ? 'Stop' : 'Start' }} Refresh
+</label>
+
+<section ng-repeat="post in vm.posts">
+	<h3>{{post.title}}</h3>
+	<p>{{post.author + "  " + post.date}}
+	<p>{{post.body}}</p>
+	<input type="button" class="btn btn-primary" value="Delete" ng-click="vm.removePost(post.id)">
+</section>
+
+</div>

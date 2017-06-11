@@ -1,0 +1,164 @@
+body {
+    padding: 10rem 2em 2em;
+    font-family: Arial, Verdana, sans-serif;
+    background: rgb(229, 242, 255) 
+    url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/swirl_pattern.png);
+}
+
+table {
+    border-spacing: 1em 3em;
+}
+
+td, th {
+    max-width: 90%;
+    border: thin solid rgb(217, 217, 217);
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #ede9de;
+    opacity: 0.8;
+}
+
+.cardImage {
+    display: block;
+    margin: 0.5em auto;
+}
+
+td:hover, th:hover {
+    background-color: #ede9de;
+}
+
+.stopInterval {
+    float: right;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: #f8dc0b;
+    box-shadow: 0.1em 0.1em 0.1em #3d3c3a;
+    margin-top: 0.5em;
+}
+
+.stopInterval:hover, .stopInterval:active {
+    background-color: #fba827;
+    color: #595959;
+    float: right;
+    display: block;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+a {
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #ddd4bc;
+}
+
+.hidden {
+    display: none;
+}
+
+#shareBox {
+    padding: 2em;
+    border: thin solid #ddd4bc;
+    margin: 2em auto;
+    background-color: #f8dc0b;
+}
+
+#shareInput {
+    min-width: 80%;
+    min-height: 4em;
+}
+
+#shareBtn {
+    background-color: white;
+    box-shadow: 1px 1px 2px #707070;
+    border-radius: 0.5em;
+    font-family: Cursive, cursive;
+    color: #3d3c3a;
+    font-size: 1em;
+    padding: 0.5em 1em;
+}
+
+#shareBtn:hover {
+    background: #cccccc;
+    color: white;
+}
+
+div#nav {
+    font-family: Georgia, Times, serif;
+    background-color: #fba827;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5em 0.5em;
+    box-shadow: 3px 1px 3px #707070;
+    text-align: center;
+    color: white;
+    opacity: 0.95;
+}
+
+#nav > p, #nav > h1, #nav > input {
+    display: inline-block;
+    padding: 0.1em;
+    margin-right: 0.3em;
+    text-align: center;
+    font-family: Georgia, Times, serif;
+}
+
+#username {
+    border: thin solid #cccccc;
+    font-size: 90%;
+}
+
+#login {
+    background-color: white;
+    margin: 0.2em;
+    font-size: 90%;
+    font-family: Georgia, Times, serif;
+    padding: 3em;
+    text-align: center;
+    width: 5em;
+    color: #4d4d4d;
+}
+
+#greeting {
+    font-size: 120%;
+    font-family: Georgia, Times, serif;
+    padding: 0.2em;
+    margin: 0.2em 0.3em 0.2em 0.2em;
+    text-align: center;
+}
+
+#username.hidden {
+    display: none;
+}
+
+#greeting.hidden {
+    display: none;
+}
+
+input.active {
+    border-color: #ddd4bc;
+}
+
+#content {
+    line-height: 2em;
+    padding: 1em;
+    background-color: white;
+    opacity: 0.8;
+}
+

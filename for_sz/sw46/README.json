@@ -1,0 +1,5 @@
+{ 
+     "netid": "sw46",
+  "frontend": "https://frontend-sw46.herokuapp.com/",
+  "backend": "https://backend-sw46.herokuapp.com/"
+}

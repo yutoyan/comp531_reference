@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="riceBookApp">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="registertaion page"/>
+    <meta name="author" content="Shuo Zhao"/>
+    <link rel="icon" href="img/logo-xs.png" type="image/x-icon">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-route.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-resource.min.js"></script> 
+</head>
+
+<body id="registerBody" ng-controller="MainCtrl as main">
+
+<!-- Navigation Bar using routing-->
+<div id="nav">
+    <ul class="list-inline">
+        <li>Rice Book</li>
+        <li><a id="logIn" href="#/logIn">Log In</a></li>
+        <li><a href="#/main">Home</a></li>
+        <li><a id="linkToProfile" href="#/profile">My Profile </a></li>
+    </ul>
+</div>
+
+<div style="padding: 0em 2em 2em 2em;">
+  <div ng-view></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="logIN.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+	"netid":"wcr1",
+  	"frontend": "https://thecatbook.herokuapp.com/",
+	"backend": "https://thecatbookserver.herokuapp.com/"
+}

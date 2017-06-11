@@ -1,0 +1,5 @@
+{ 
+     "netid": "xl58",
+  "frontend": "https://xdapp3.herokuapp.com",
+  "backend": "https://xdappserver3.herokuapp.com"
+}

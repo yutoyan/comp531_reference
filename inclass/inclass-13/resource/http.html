@@ -1,0 +1,15 @@
+<h3>$http Service</h3>
+
+<label class="btn"
+	ng-class="{ 'btn-warning': vm.stop, 'btn-success': !vm.stop }" 
+	ng-click="vm.toggleLoading()">
+	{{ vm.stop ? 'Stop' : 'Start' }} Refresh
+</label>
+
+<section ng-repeat="post in vm.posts">
+	<h3>{{post.title}}</h3>
+	<p>{{post.body}}</p>
+	<input type="button" class="btn btn-primary" value="Delete" ng-click="vm.removePost(post.id)">
+</section>
+
+</div>

@@ -1,0 +1,73 @@
+NetID: yz72    "Yuan Zhang"
+========================================================================================================================================================================    
+               ITEM                                                                                             |      PTS          |       COMMENTS        
+========================================================================================================================================================================
+ I. Merits                                                                                                      |  [100]   |        |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    README.txt file with netid, frontend and backend URLs                                                       | 2        | 2      |
+    AutoGrader: all backend functionality is present as per previous assignment                                 | 20       | 20     |
+    Frontend: user interface and style                                                                          | 5        | 5      |
+    Frontend: fully functional as per previous assignments                                                      | 10       | 10     |
+    User's feed is provided by an efficient MongoDB query and only returns the 10 most recent posts             | 15       | 15     |
+    User can login with third-party authentication                                                              | 10       | 10     |Avatar is not persistent when facebook login is used.
+    Session is stored in a Redis cache store                                                                    | 10       | 10     |
+    Make post with text and image                                                                               | 5        | 5      |
+    Update profile picture                                                                                      | 5        | 5      |
+    Uploaded images are persistent to dyno reboots, i.e., use Cloudinary                                        | 5        | 5      |
+    JavaScript source is appropriately divided into separate files by component                                 | 3        | 3      |
+    Link and unlink third-party logins with local accounts                                                      | 10       | 10     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ II. Demerits                                                                                                   | [270]    |        |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    expensive service call, such as loadPosts after the initial load                                            | 5        |        |
+    did not follow John Papa's Angular Style Guide                                                              | 25       |        |
+    unapproved third party module                                                                               | 20       |        |
+    code smells bad or has some issue                                                                           | 10       |        |
+    submitted .git or node_modules directory                                                                    | 10       |        |
+    sections of code repeated more than twice (i.e., it's not DRY code)                                         | 10       |        |
+    variable not appropriately scoped (i.e., missing var, or var in wrong scope)                                | 10       |        |
+    fat Angular Controller                                                                                      | 10       |        |
+    did not properly separate concerns                                                                          | 10       |        |
+    user interface not obvious to use                                                                           | 10       |        |
+    a non-server error is thrown                                                                                | 8        |        |
+    lingering console message                                                                                   | 5        |        |
+    bad variable name                                                                                           | 5        |        |
+    bad datastructure choice or usage                                                                           | 5        |        |
+    inappropriate use of new                                                                                    | 5        |        |
+    improper use of comments                                                                                    | 5        |        |
+    no comments at all (you should have describing comments to explain why 
+    you are doing things the way you are doing them)                                                            | 5        |        |
+    dead code, e.g., commented or unreachable code                                                              | 5        |        |
+    code makes unchecked assumption                                                                             | 5        |        |
+    non-CSS styling                                                                                             | 5        |        |
+    inefficient algorithm                                                                                       | 5        |        |
+    poor implementation                                                                                         | 5        |        |
+    expensive network load                                                                                      | 5        |        |
+    JavaScript file has too many lines of code (more than about 500 lines)                                      | 5        |        |
+    JavaScript file inappropriately has too few lines of code (should be at 
+    least 5 lines otherwise combine with another file)                                                          | 5        |        |
+    function length is too long (more than about 60 lines)                                                      | 5        |        |
+    function performs too many functions                                                                        | 5        |        |
+    complex code statement (should be broken up or is missing appropriate comment)                              | 5        |        |
+    unnecessary intermixing of content (HTML) and style (CSS)                                                   | 5        |        |
+    unnecessary intermixing of content (HTML) and logic (JavaScript)                                            | 5        |        |
+    inappropriate magic value                                                                                   | 3        |        |
+    missing braces for blocks, e.g., if, for, while                                                             | 3        |        |
+    bad indentation                                                                                             | 3        |        |
+    poorly named function                                                                                       | 3        |        |
+    missing cached variable, e.g., not caching DOM lookup                                                       | 3        |        |
+    reassigning or multiply assigning variables                                                                 | 3        |        |
+    code line length too long (more than about 80 characters)                                                   | 3        |        |
+    too much white space (use white space for logical separations and promote grouping)                         | 3        |        |
+    excessive use of DOM ids                                                                                    | 3        |        |
+    missing clear abstraction usage opportunity                                                                 | 3        |        |
+    for loop used instead of more appropriate functional style                                                  | 3        |        |
+    variable not appropriately initialized                                                                      | 3        |        |
+    did not use shortcut for boolean, i.e., if (bool == true) should be if (bool)                               | 3        |        |
+    inappropriate character in filename, e.g., space                                                            | 3        |        |
+    a 'what' comment, e.g., // set var to 0                                                                     | 3        |        |
+    multi-line comment where // should be used instead                                                          | 1        |        |
+    long comment at end of line instead of on separate lines                                                    | 1        |        |
+============================================================================================================================================================================== 
+     Total                                                                                                      | [100]    |        |
+==============================================================================================================================================================================

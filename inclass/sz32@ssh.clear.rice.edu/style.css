@@ -1,0 +1,165 @@
+body {
+    padding: 10rem 2em 2em;
+    font-family: Arial, Verdana, sans-serif;
+    background: rgb(229, 242, 255) 
+    url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/swirl_pattern.png);
+}
+
+#registerForm {
+    padding: 2em 2em 2em;
+    background-color: #ede9de;
+    opacity: 0.9;
+}
+
+#loginPage {
+    padding: 2em 2em 2em;
+    background-color: #ede9de;
+    opacity: 0.9;
+
+}
+
+/* Carousel Styling */
+.slide1 {
+    height: 30em;
+    background: url('img/slide1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.slide2 {
+    height: 30em;
+    background: url('img/slide2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.carousel-caption h1 {
+    font-size: 5.4em;
+    font-family: 'Pacifico', cursive;
+    padding-bottom: .4em;
+    color: #fba827;
+}
+
+#theCarousel {
+    position: relative;
+    top: -6em;
+    width: 100%;
+}
+
+.cardImage {
+    display: block;
+    margin: 0.5em auto;
+    max-width: 90%;
+}
+
+a {
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #ddd4bc;
+}
+
+.hidden {
+    display: none;
+}
+
+.well#shareBox{
+    background-color: #f8dc0b;
+     text-align: right;
+}
+
+div#nav {
+    font-family: Georgia, Times, serif;
+    background-color: #fba827;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    max-width: 100%;
+    width: 100%;
+    padding: 0.5em 0.5em;
+    box-shadow: 3px 1px 3px #707070;
+    text-align: center;
+    color: white;
+    opacity: 0.95;
+}
+
+#nav > p, #nav > h1, #nav > input {
+    display: inline-block;
+    padding: 0.1em;
+    margin-right: 0.3em;
+    text-align: center;
+    font-family: Georgia, Times, serif;
+}
+
+#username {
+    border: thin solid #cccccc;
+    font-size: 90%;
+}
+
+input.active {
+    border-color: #ddd4bc;
+}
+
+.currentInfo, #updateInfo, #currentProfilePhoto {
+    line-height: 2em;
+    padding: 1em;
+    font-size: 1em;
+    background-color: #ede9de;
+    opacity: 0.95;
+
+}
+
+img.avatar {
+    width: 80%;
+}
+
+.card {
+    border: thin solid rgb(217, 217, 217);
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+#userStatus, #followings {
+    border: thin solid rgb(217, 217, 217);
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.userSidebarName {
+    background-color: #ede9de;
+    opacity: 0.8;
+}
+
+.postInfo{
+    background-color: #ede9de;
+}

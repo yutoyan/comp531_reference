@@ -1,0 +1,5 @@
+{ 
+    "netid": "ls53",
+    "frontend": "https://yetanotheryoyospace.herokuapp.com",
+    "backend": "https://yoyospaceserver.herokuapp.com"
+}
